@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://khoanguyen-byte.github.io/the-ceo-compass/sitemap.xml
