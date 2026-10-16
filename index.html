@@ -899,6 +899,7 @@ class Component extends DCLogic {
       this.setState({ sending: true, error: '' });
       try { if (window.fbq) window.fbq('track', 'CompleteRegistration'); } catch (e) {}
       const done = () => {
+        try { if (window.gtag) window.gtag('event', 'qualify_lead', { form_name: 'Workshop New Brand Development', region: data.region, value: isEarly ? 13000000 : 15000000, currency: 'VND' }); } catch (e) {}
         if (window.nbdTrack) window.nbdTrack('Lead', { content_name: 'Workshop New Brand Development', currency: 'VND', value: isEarly ? 13000000 : 15000000, region: data.region, utm_source: data.utm_source, utm_campaign: data.utm_campaign });
         this.setState({ sent: true, sending: false, error: '' });
       };
